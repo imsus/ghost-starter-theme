@@ -1,0 +1,77 @@
+{{!< default}}
+
+{{#post}}
+  <main role="main">
+    <article class="{{post_class}}">
+
+      <header class="pa3 bb">
+        <div class="mb3"><a class="blue no-underline f6 dib" href="/">Back</a></div>
+        <h1 class="mt0 mb2 f3 lh-solid rubik">{{title}}</h1>
+        <section class="roboto-mono">
+            <time class="dib f6 mb2" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+        </section>
+      </header>
+      {{#if featured}}
+        <div class="bg-light-yellow ph3 pv2 tc bb">Featured Post</div>
+      {{/if}}
+
+      <section class="nested-list-reset nested-copy-line-height nested-copy-seperator nested-img nested-links ph3 mb4">
+        {{content}}
+      </section>
+
+      <footer>
+        {{#if tags}}
+          <div class="mh3 mb3">
+            <div class="rubik b mb2">Tagged in:</div>
+            <ul class="list flex flex-wrap ma0 pa0 f6">
+            {{#foreach tags}}
+              <li>
+                <a class="dib mr1 no-underline blue ba b--black pa1 mb1" href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+              </li>  
+            {{/foreach}}
+            </ul>
+          </div>
+        {{/if}}
+        {{#author}}
+          <div class="ba mh3">
+            <div class="bb pa2 f6 roboto-mono" style="background-color: #F5F7F8">Author Info</div>
+            <div class="flex pa2">
+              <img class="flex-none w3 h3 mr3 br-pill" src="{{image}}" alt="">
+              <div class="flex-auto">
+                <h1 class="mt0 mb1 f4 rubik">{{name}}</h1>
+                <p class="ma0 lh-title">{{bio}}</p>
+              </div>
+            </div>
+          </div>
+        {{/author}}
+      </footer>
+
+    </article>
+  </main>
+
+  <aside class="pa2">
+      {{#next_post}}
+        <div class="mh2 ba mb2">
+          <div class="bb pa2 f6 roboto-mono" style="background-color: #F5F7F8">Next Post</div>
+          <a class="db black-80 no-underline pa2" href="{{url}}">
+            <section>
+              <h2 class="rubik f4 lh-title mt0 mb2 measure-narrow">{{title}}</h2>
+              <p class="ma0 lh-copy">{{excerpt words="19"}}&hellip;</p>
+            </section>
+          </a>
+        </div>
+      {{/next_post}}
+      {{#prev_post}}
+        <div class="mh2 ba mb2">
+          <div class="bb pa2 f6 roboto-mono" style="background-color: #F5F7F8">Previous Post</div>
+          <a class="db black-80 no-underline pa2" href="{{url}}">
+            <section>
+              <h2 class="rubik f4 lh-title mt0 mb2 measure-narrow">{{title}}</h2>
+              <p class="ma0 lh-copy">{{excerpt words="19"}}&hellip;</p>
+            </section>
+          </a>
+        </div>
+      {{/prev_post}}
+  </aside>
+{{/post}}
+

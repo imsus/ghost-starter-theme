@@ -1,0 +1,16 @@
+{{!< default}}
+
+<header class="pa3 bb mb3 h4 flex items-end">
+  <div>
+    <h1 class="ma0 f3 rubik">About Me</h1>
+    <p class="lh-copy measure ma0 roboto-mono">About the blog owner</p>
+  </div>
+</header>
+
+{{#post}}
+  <main class="ph3 h-100">
+    <section class="nested-list-reset nested-copy-line-height nested-copy-seperator nested-links mb4 tc">
+      {{content}}
+    </section>
+  </main>
+{{/post}}

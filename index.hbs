@@ -1,0 +1,33 @@
+{{!< default}}
+
+<header class="pa3 bb mb3 h4 flex items-end">
+  <div>
+    {{#if @blog.title}}<h1 class="ma0 f3 rubik">{{@blog.title}}</h1>{{/if}}
+    {{#if @blog.description}}<p class="lh-copy measure ma0 roboto-mono">{{@blog.description}}</p>{{/if}}
+  </div>
+</header>
+
+<main class="ph3">
+  {{pagination}}
+  <div class="h-100">
+    {{#foreach posts}}
+      <div class="ba mb3">
+        <div class="bb f6 roboto-mono" style="background-color: #F5F7F8">
+          <div class="flex justify-between pa2">
+            {{#if tags}}{{#foreach tags limit="1"}}<a class="black-80 no-underline" href="{{url}}">{{name}}</a>{{/foreach}}{{/if}}
+            <time class="dib" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+          </div>
+          {{#if featured}}
+            <div class="bg-light-yellow tc ph2 pv1 bt">Featured Post</div>
+          {{/if}}
+        </div>
+        <a class="db black-80 no-underline pa2" href="{{url}}">
+          <section>
+            <h2 class="rubik f4 lh-title mt0 mb2 measure-narrow">{{title}}</h2>
+            <p class="ma0 lh-copy">{{excerpt characters="140"}}&hellip;</p>
+          </section>
+        </a>
+      </div>
+    {{/foreach}}
+  </div>
+</main>

@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{#if success}}
+    <header>
+        <h1>Success!</h1>
+    </header>
+{{else if error}}
+    <header>
+        <h1>Error!</h1>
+    </header>
+
+    {{subscribe_form autofocus="true"}}
+{{else}}
+    <header>
+        <h1>Subscribe...</h1>
+    </header>
+
+    {{subscribe_form autofocus="true"}}
+{{/if}}
+
