@@ -3,5 +3,9 @@
   "/assets/js/app.js": "/assets/js/app.js",
   "/mix.js": "/mix.js",
   "/assets/css/app.css": "/assets/css/app.css",
-  "/assets/js/manifest.js": "/assets/js/manifest.js"
+  "/assets/js/manifest.js": "/assets/js/manifest.js",
+  "/assets/js/vendor.js.map": "/assets/js/vendor.js.map",
+  "/assets/js/app.js.map": "/assets/js/app.js.map",
+  "/assets/css/app.css.map": "/assets/css/app.css.map",
+  "/assets/js/manifest.js.map": "/assets/js/manifest.js.map"
 }

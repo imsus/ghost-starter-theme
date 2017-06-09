@@ -6,13 +6,9 @@ import BlogArchive from '../vue/BlogArchive.vue'
 
 Vue.use(VueAsyncComputed)
 
-export default {
-  init () {
-    new Vue({
-      el: '#app',
-      components: {
-        TagList, BlogArchive
-      }
-    })
+export default new Vue({
+  el: '#app',
+  components: {
+    TagList, BlogArchive
   }
-}
+})
